@@ -1,0 +1,9 @@
+[build]
+  # 1. Netlify navigates into the Frontend/ folder.
+  base = "Frontend"
+  
+  # 2. Netlify installs dependencies (npm install) and then runs your build script.
+  command = "npm install && npm run build"
+  
+  # 3. Netlify publishes the 'build' folder created inside the 'Frontend' folder.
+  publish = "build"
