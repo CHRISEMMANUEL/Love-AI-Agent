@@ -84,7 +84,7 @@ export default function App() {
   
   const callApiWithBackoff = async (payload: GeneratePayload, maxRetries = 5): Promise<GenerateResponse> => {
     // const apiKey = ""; 
-    const apiUrl = `http://localhost:8000/api/generate`; 
+    const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/generate`; 
 
     for (let i = 0; i < maxRetries; i++) {
       try {
