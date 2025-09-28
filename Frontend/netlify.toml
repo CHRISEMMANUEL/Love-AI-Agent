@@ -1,0 +1,9 @@
+[build]
+  # This tells Netlify to navigate into the Frontend/ directory before building
+  base = "Frontend/"
+  
+  # The build command to run inside the base directory
+  command = "npm run build"
+  
+  # The directory to publish, which is `build` relative to the `base` directory
+  publish = "build"
