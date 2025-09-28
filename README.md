@@ -1,89 +1,98 @@
-# Love AI Agent
+💖 Love AI Agent
+Description
+Built with Llama 3.3, the Love AI Agent is a charming application designed to enrich emotional connections. It generates poetic love messages, romantic advice, and offers emotional support with vibrant animations and glowing text for an enchanting and user-friendly experience.
 
-A personalized AI companion that generates poetic love messages, romantic advice, and emotional support with an enchanting UI.
+ Features
+Poetic Generation: Utilizes the Llama 3.3 model for highly creative and emotionally resonant message generation.
 
-#Overview
+Romantic Advice: Provides thoughtful and constructive relationship advice.
 
-Love AI Agent is an AI-powered web app built with Llama 3.3 and Python that crafts heartfelt love notes, romantic advice, and sweet messages tailored to your loved one. With glowing text animations, vibrant visuals, and personalization options, it combines natural language processing (NLP) with a delightful user experience.
+Emotional Support: Offers comforting and supportive responses for tough days.
 
-#Features
+Enchanting UI: Features vibrant animations and a glowing, modern aesthetic to enhance user interaction.
 
-📝 Message Generator → Romantic letters, short notes, playful texts, or long epistles.
+Modular Architecture: Separation of concerns with a dedicated frontend and backend service.
 
-🎭 Mood & Style Selection → Choose tone (romantic, poetic, flirty, supportive).
+🛠 Tech Stack
+The Love AI Agent utilizes a modern, performance-focused stack across its components.
 
-❤️ Personalization → Insert recipient’s name for tailor-made love notes.
+Component
 
-📓 Love Journal → Save & revisit generated messages.
+Technology
 
-🌌 UI Magic → Animated glowing text, floating hearts, and smooth transitions.
+Description
 
-⏰ Daily Love Drop → Receive a new sweet message each day.
+AI/NLP
 
-📤 Export Options → Save as PDF or share as a love card.
+Llama 3.3 (via Groq)
 
-🛠️ Tech Stack
+High-speed, high-quality language generation.
 
-AI/NLP: Llama 3.3
+Backend
 
-Backend: Python (FastAPI/Flask)
+Python
 
-Frontend: React + TailwindCSS + Framer Motion
+Serves the API and handles secure interaction with the language model.
 
-Database: Firebase / SQLite
+Frontend
 
-Deployment: Render (backend) + Vercel/Netlify (frontend)
+TypeScript, React, Vite
 
-⚙️ How It Works
+Modern, fast, and type-safe user interface development.
 
-User enters recipient’s name and selects mood/style.
+Concept
 
-Backend crafts a structured prompt for Llama 3.3.
+NLP (Natural Language Processing)
 
-AI generates a personalized romantic message.
+Core foundation for understanding and generating human language.
 
-Frontend displays it with animated glowing effects.
+ Installation & Local Setup
+The project is structured as a monorepo with distinct Frontend (Vite/React) and Backend (Python) directories.
 
-User can save it to their Love Journal or export as PDF/quote card.
+1. Prerequisites
+Node.js (LTS recommended)
 
-📸 Screenshots / Demo
+Python 3.8+
 
-(Add screenshots or GIFs of the glowing text animations, UI screens, and sample generated messages here.)
+Groq API Key (required for the backend to function)
 
-🚀 Setup & Installation
-1. Clone the repo
-git clone https://github.com/your-username/love-ai-agent.git
-cd love-ai-agent
+2. Backend Setup
+Navigate to the backend directory:
 
-2. Backend Setup (Python + FastAPI/Flask)
+cd Backend
+
+Install Python dependencies (ensure you are using a virtual environment):
+
 pip install -r requirements.txt
-python app.py
 
-3. Frontend Setup (React + Vite/Next.js)
-cd frontend
+Create a .env file in the Backend directory and add your API key:
+
+GROQ_API_KEY=YOUR_GROQ_API_KEY
+
+Run the backend server:
+
+python main.py  # Or equivalent run command
+
+3. Frontend Setup
+Navigate to the frontend directory:
+
+cd Frontend
+
+Install Node dependencies:
+
 npm install
+
+Since the backend is running locally, update your frontend environment variables to point to http://localhost:5000 (or whatever port your backend uses).
+
+Start the development server:
+
 npm run dev
 
-4. Connect to Llama 3.3
+The application should now be accessible in your browser, typically at http://localhost:5173.
 
-Configure API key in .env file:
+🌐 Deployment
+The Love AI Agent is deployed as follows:
 
-LLAMA_API_KEY=your_api_key_here
+Frontend: Hosted on Netlify
 
-🧩 Roadmap
-
- Add voice synthesis (AI reads love letters aloud).
-
- Add multi-language support (French, Spanish, Yoruba 😏).
-
- Add chat-style conversation with the Love AI.
-
- Integrate Twilio API → send daily love SMS.
-
-🤝 Contributions
-
-Contributions are welcome! Feel free to fork the repo, open issues, or submit PRs.
-
-📜 License
-
-MIT License © 2025
+Backend API: Hosted on Render (using a free-tier service which may spin down due to inactivity).
