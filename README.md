@@ -1,98 +1,55 @@
-💖 Love AI Agent
-Description
-Built with Llama 3.3, the Love AI Agent is a charming application designed to enrich emotional connections. It generates poetic love messages, romantic advice, and offers emotional support with vibrant animations and glowing text for an enchanting and user-friendly experience.
+# 💖 Love AI Agent
 
- Features
-Poetic Generation: Utilizes the Llama 3.3 model for highly creative and emotionally resonant message generation.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7ccf8965-22d6-4570-9c32-65a85e47a0a2/deploy-status)](https://app.netlify.com/sites/love-ai-agent/deploys)
+[![Render](https://img.shields.io/badge/Backend-Render-blue)](https://render.com/)
+![Python](https://img.shields.io/badge/Python-3.8%2B-yellow)
+![Node.js](https://img.shields.io/badge/Node.js-LTS-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Romantic Advice: Provides thoughtful and constructive relationship advice.
+---
 
-Emotional Support: Offers comforting and supportive responses for tough days.
+## 📖 Description
+The **Love AI Agent** is a delightful AI-powered companion built with **Llama 3.3**.  
+It generates poetic love messages, offers thoughtful relationship advice, and provides emotional support — all within a glowing, animated interface designed to captivate and comfort.  
 
-Enchanting UI: Features vibrant animations and a glowing, modern aesthetic to enhance user interaction.
+---
 
-Modular Architecture: Separation of concerns with a dedicated frontend and backend service.
+## ✨ Features
+- 💌 **Poetic Generation** – Creative and emotionally resonant love messages.  
+- 💡 **Romantic Advice** – Thoughtful and constructive relationship guidance.  
+- 🤗 **Emotional Support** – Comforting responses for tough days.  
+- 🎨 **Enchanting UI** – Glowing, animated design for an immersive experience.  
+- 🧩 **Modular Architecture** – Separate frontend (React/Vite) and backend (FastAPI).  
 
-🛠 Tech Stack
-The Love AI Agent utilizes a modern, performance-focused stack across its components.
+---
 
-Component
+## 🛠 Tech Stack
 
-Technology
+| Component  | Technology                | Description                                           |
+|------------|---------------------------|-------------------------------------------------------|
+| **AI/NLP** | **Llama 3.3 (via Groq)** | High-speed, high-quality text generation.             |
+| **Backend** | **Python (FastAPI)**     | REST API handling AI model communication.             |
+| **Frontend** | **TypeScript, React, Vite** | Modern, fast, type-safe UI framework.            |
+| **Concept** | **NLP (Natural Language Processing)** | Core foundation for text understanding & generation. |
 
-Description
+---
 
-AI/NLP
+## ⚙️ Installation & Local Setup
 
-Llama 3.3 (via Groq)
+This project is structured as a **monorepo** with distinct `Frontend/` and `Backend/` directories.
 
-High-speed, high-quality language generation.
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) (LTS recommended)  
+- [Python 3.8+](https://www.python.org/)  
+- [Groq API Key](https://groq.com/)  
 
-Backend
+---
 
-Python
+### 2. Backend Setup
 
-Serves the API and handles secure interaction with the language model.
-
-Frontend
-
-TypeScript, React, Vite
-
-Modern, fast, and type-safe user interface development.
-
-Concept
-
-NLP (Natural Language Processing)
-
-Core foundation for understanding and generating human language.
-
- Installation & Local Setup
-The project is structured as a monorepo with distinct Frontend (Vite/React) and Backend (Python) directories.
-
-1. Prerequisites
-Node.js (LTS recommended)
-
-Python 3.8+
-
-Groq API Key (required for the backend to function)
-
-2. Backend Setup
-Navigate to the backend directory:
-
+```bash
 cd Backend
-
-Install Python dependencies (ensure you are using a virtual environment):
-
 pip install -r requirements.txt
 
-Create a .env file in the Backend directory and add your API key:
 
-GROQ_API_KEY=YOUR_GROQ_API_KEY
 
-Run the backend server:
-
-python main.py  # Or equivalent run command
-
-3. Frontend Setup
-Navigate to the frontend directory:
-
-cd Frontend
-
-Install Node dependencies:
-
-npm install
-
-Since the backend is running locally, update your frontend environment variables to point to http://localhost:5000 (or whatever port your backend uses).
-
-Start the development server:
-
-npm run dev
-
-The application should now be accessible in your browser, typically at http://localhost:5173.
-
-🌐 Deployment
-The Love AI Agent is deployed as follows:
-
-Frontend: Hosted on Netlify
-
-Backend API: Hosted on Render (using a free-tier service which may spin down due to inactivity).
